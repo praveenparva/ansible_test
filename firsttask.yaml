@@ -1,5 +1,5 @@
 ---
-- hosts: jenkins
+- hosts: 35.190.174.154
   become: true
   tasks:
     - name: install web components
