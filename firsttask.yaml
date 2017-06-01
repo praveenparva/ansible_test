@@ -2,14 +2,12 @@
 - hosts: 35.190.174.154
   become: true
   tasks:
-    - name: install web components
-      apt: name={{item}} state=present update_cache=yes
+    - name: Install Packages
+      yum: name={{item}} state=installed
       with_items:
-        - apache2
-        - libapache2-mod-wsgi
-        - python-pip
-        - python-virtualenv
-        - python-mysqldb
-
-    - name: ensure apache2 started
-      service: name=apache2 state=started enabled=yes
+        - vim
+        - telnet
+        - wget
+        - gzip
+        - unzip
+        - net-tools
